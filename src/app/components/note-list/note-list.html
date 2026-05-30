@@ -1,0 +1,31 @@
+<div class="noteList-container">
+  <h2>Notes List</h2>
+
+  <div class="search-container">
+    <input 
+     type="text"
+     placeholder="Search Notes..."
+     [(ngModel)] = "searchTerm"
+     class="search-input"
+    >
+  </div>
+  
+  <div class="list-wrapper">
+    @for (note of notes() | search: searchTerm; track note._id) {
+      <div class="noteList-row">
+       <div class="note-content">
+         <h3>{{note.title}}</h3>
+         <p>{{note.content}}</p>
+       </div>
+
+       <div class="note-actions">
+         <button class="edit-btn" (click)="onEdit(note)">Edit</button>
+         <button class="delete-btn" (click)="onDelete(note._id!)">Delete</button>
+       </div>
+
+      </div>  
+    } @empty {
+      <p class="empty-msg">No notes found. Create one above to get started!</p>  
+    }
+  </div>
+</div>

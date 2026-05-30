@@ -1,0 +1,91 @@
+.editor-container {
+  max-width: 600px; 
+  padding: 25px;  
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+ margin-top: 0;
+ margin-bottom: 20px;
+ color: #333;
+ font-size: 1.4rem;
+ text-align: center;   
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;  
+}
+
+.input-title,
+.input-content {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;  
+}
+
+.input-content {
+  resize: none; 
+  height: 170px;
+}
+
+.input-title:focus,
+.input-content:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2); 
+}
+
+.editor-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;  
+  margin-top: 20px;
+}
+
+button {
+ padding: 10px 20px;
+ border: none;
+ border-radius: 4px;
+ font-size: 1rem;
+ font-weight: bold;
+ cursor: pointer;
+ transition: background-color 0.2s ease, transform 0.1s ease;   
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.cancel-btn {
+  background-color: #e2e6ea;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background-color: #d1d5d9;
+}
+
+
+//Make da float effect
+.modal-backdrop {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}

@@ -1,0 +1,13 @@
+<div class="creator-container">
+  <h3>Create Note</h3>
+
+  <div class="form-group">
+    <input type="text" placeholder="Note title" [(ngModel)]="noteTitle" class="input-title">
+    <textarea placeholder="Note content" [(ngModel)]="noteContent" class="input-content" rows="4"></textarea>
+  </div>
+
+  <div class="creator-actions">
+    <button class="add-btn" (click)="onAddNote()">Create</button>
+    <button class="clear-btn" (click)="onClear()">Clear</button>
+  </div>
+</div>
